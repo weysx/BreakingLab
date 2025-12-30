@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1665684134724060487}
   - component: {fileID: 9005804223619322710}
   - component: {fileID: -3888789477889034519}
+  - component: {fileID: -8261345923466993309}
   m_Layer: 0
   m_Name: cup1
   m_TagString: Untagged
@@ -98,3 +99,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPrefab: {fileID: 5976498680463440921, guid: b4a845f65a4ae2d4d85a4d5caaea81c5, type: 3}
+--- !u!114 &-8261345923466993309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187183577452354344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce235d4ed122974d9d19864f820c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

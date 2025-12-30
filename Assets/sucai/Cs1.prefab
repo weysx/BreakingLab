@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2915980051806330306}
   - component: {fileID: 2915980051806330309}
   - component: {fileID: -2470056995479462532}
+  - component: {fileID: -8997340978806473875}
   m_Layer: 0
   m_Name: Cs1
   m_TagString: Untagged
@@ -98,3 +99,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPrefab: {fileID: 2915980051806330308, guid: fe0c2f7d08d944819a68b2d5a26bc4f5, type: 3}
+--- !u!114 &-8997340978806473875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915980051806330308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ce235d4ed122974d9d19864f820c3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
