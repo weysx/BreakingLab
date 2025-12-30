@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class watercolourchange : MonoBehaviour
 {
-    [Header("µ±Ç°×´Ì¬")]
-    public bool hasSuan = false;      // ÊÇ·ñÓÐËá
-    public bool hasJian = false;      // ÊÇ·ñÓÐ¼î
-    public bool hasZhishi = false;    // ÊÇ·ñÓÐÖ¸Ê¾¼Á
+  [Header("ï¿½ï¿½Ç°×´Ì¬")]
+    public bool hasSuan = false;
+    public bool hasJian = false;
+    public bool hasZhishi = false;
+    public bool hasNaCO3 = false;
 
-    [Header("ÑÕÉ«ÉèÖÃ")]
-    public Color acidColor = Color.green;   // Ö¸Ê¾¼Á + Ëá ¡ú ÂÌ
-    public Color baseColor = Color.blue;    // Ä¬ÈÏ ¡ú À¶
-    public Color alkaliColor = Color.red;   // Ö¸Ê¾¼Á + ¼î ¡ú ºì
+    [Header("ï¿½ï¿½É«ï¿½ï¿½ï¿½ï¿½")]
+    public Color acidColor = Color.green;
+    public Color baseColor = Color.blue;
+    public Color alkaliColor = Color.red;
 
-    [Header("ÑÕÉ«±ä»¯ËÙ¶È")]
+    [Header("ï¿½ï¿½É«ï¿½ä»¯ï¿½Ù¶ï¿½")]
     public float colorChangeSpeed = 2f;
 
     private SpriteRenderer sr;
@@ -30,7 +31,6 @@ public class watercolourchange : MonoBehaviour
     {
         UpdateTargetColor();
 
-        // »ºÂý±äÉ«£¨²»¸ÄÍ¸Ã÷¶È£©
         Color current = sr.color;
         Color next = Color.Lerp(
             current,
@@ -38,37 +38,51 @@ public class watercolourchange : MonoBehaviour
             Time.deltaTime * colorChangeSpeed
         );
         sr.color = next;
+
+        CheckNaCO3Reaction();
     }
 
     void UpdateTargetColor()
     {
-        // Ëá¼îÍ¬Ê±´æÔÚ ¡ú Ïà»¥µÖÏû
         if (hasSuan && hasJian)
         {
             hasSuan = false;
             hasJian = false;
         }
 
-        // Ö¸Ê¾¼Á + Ëá
         if (hasZhishi && hasSuan)
         {
             targetColor = acidColor;
             return;
         }
 
-        // Ö¸Ê¾¼Á + ¼î
         if (hasZhishi && hasJian)
         {
             targetColor = alkaliColor;
             return;
         }
 
-        // Ö»ÓÐÖ¸Ê¾¼Á »ò Ê²Ã´¶¼Ã»ÓÐ
         targetColor = baseColor;
     }
 
-    // ====== ¹©Íâ²¿µ÷ÓÃµÄ·½·¨ ======
+    // ===== ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ NaCO3 + ï¿½ï¿½ =====
+    void CheckNaCO3Reaction()
+    {
+        if (hasSuan && hasNaCO3)
+        {
+            // ï¿½Òµï¿½Ë®ï¿½Ðµï¿½ NaCO3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦
+            NaCO3Reaction[] list = FindObjectsOfType<NaCO3Reaction>();
+            foreach (var na in list)
+            {
+                na.StartReaction();
+            }
 
+            // ï¿½ï¿½Ö¹ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½
+            hasNaCO3 = false;
+        }
+    }
+
+    // ===== ï¿½â²¿ï¿½ï¿½ï¿½ï¿½ =====
     public void EnterSuan()
     {
         hasSuan = true;
@@ -82,5 +96,10 @@ public class watercolourchange : MonoBehaviour
     public void EnterZhishi()
     {
         hasZhishi = true;
+    }
+
+    public void EnterNaCO3()
+    {
+        hasNaCO3 = true;
     }
 }
