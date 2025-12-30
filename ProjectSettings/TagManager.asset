@@ -12,6 +12,7 @@ TagManager:
   - zhishi
   - NaCO3
   - Lamp
+  - Match
   layers:
   - Default
   - TransparentFX
