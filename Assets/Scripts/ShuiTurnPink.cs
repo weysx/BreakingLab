@@ -30,7 +30,6 @@ public class ShuiTurnPink : MonoBehaviour
     {
         if (collision.collider.CompareTag("Na"))
         {
-            Debug.Log("1");
             startChange = true;
         }
     }
