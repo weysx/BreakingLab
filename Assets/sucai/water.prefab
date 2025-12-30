@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd0f94d0509392e41a902fdf6bc648e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetColor: {r: 0.9622642, g: 0.3147027, b: 0.47341877, a: 1}
+  targetColor: {r: 0.5849056, g: 0, b: 0.1462264, a: 1}
   colorSpeed: 1
 --- !u!114 &-7115975576510898043
 MonoBehaviour:
@@ -142,6 +142,7 @@ MonoBehaviour:
   hasSuan: 0
   hasJian: 0
   hasZhishi: 0
+  hasNaCO3: 0
   acidColor: {r: 0, g: 1, b: 0, a: 1}
   baseColor: {r: 0.07058824, g: 0.47058824, b: 0.6862745, a: 1}
   alkaliColor: {r: 1, g: 0, b: 0, a: 1}
