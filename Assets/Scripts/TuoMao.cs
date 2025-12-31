@@ -14,8 +14,12 @@ public class TuoMao : MonoBehaviour
     void OnMouseDown()
     {
         // 只响应 Tag 为 Lamp 的物体
-        if (!CompareTag("Lamp")) return;
-
+        if (!CompareTag("Lamp")) {
+            Debug.Log("1");
+            return;
+        }
+            
+           
         if (animator == null) return;
 
         animator.SetTrigger("Takeoff");
