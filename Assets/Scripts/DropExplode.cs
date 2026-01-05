@@ -12,7 +12,7 @@ public class DropExplode : MonoBehaviour
     {
         if (collision.collider.CompareTag("shui") && !hasExploded)
         {
-            Debug.Log("Cs遇水爆炸");
+            //Debug.Log("Cs遇水爆炸");
             hasExploded = true;
             ExplodeCup();
             // 销毁掉落的物体
