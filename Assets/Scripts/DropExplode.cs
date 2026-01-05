@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DropExplode : MonoBehaviour
 {
-    public GameObject cupBoomPrefab; // 烧杯爆炸的prefab，如果为空则尝试查找场景中的烧杯并播放动画
-    public Vector3 positionOffset = Vector3.zero; // 位置偏移量，用于微调爆炸位置
+    public GameObject cupBoomPrefab;
+    public Vector3 positionOffset = Vector3.zero;
     private bool hasExploded = false;
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -22,7 +22,6 @@ public class DropExplode : MonoBehaviour
 
     void ExplodeCup()
     {
-        // 查找场景中的烧杯
         GameObject cup = GameObject.FindGameObjectWithTag("shaobei");
         
         if (cup != null)
