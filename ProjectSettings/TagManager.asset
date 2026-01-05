@@ -13,6 +13,8 @@ TagManager:
   - NaCO3
   - Lamp
   - Match
+  - fire
+  - Li
   layers:
   - Default
   - TransparentFX

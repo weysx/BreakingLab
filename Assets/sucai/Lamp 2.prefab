@@ -142,7 +142,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 329357537886212137, guid: 2651a30c5961864488a0dcd06c1c0e20, type: 3}
       propertyPath: m_Name
-      value: Lamp 2 1 1 1
+      value: Lamp 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2499282694166888314, guid: 2651a30c5961864488a0dcd06c1c0e20, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5931758431966739212, guid: 2651a30c5961864488a0dcd06c1c0e20, type: 3}
       propertyPath: m_RootOrder
